@@ -16,6 +16,7 @@ public class GlobalExceptionHandler {
 
     /**
      * 权限校验失败
+     * 在ShiroConfig中配置的权限校验失败无法跳转，使用全局异常处理来跳转
      *
      * @param e
      * @return
