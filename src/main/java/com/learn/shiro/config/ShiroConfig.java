@@ -56,6 +56,13 @@ public class ShiroConfig {
         return shiroFilterFactoryBean;
     }
 
+
+    /**
+     * Shiro核心安全管理器
+     *
+     * @param userRealm
+     * @return
+     */
     @Bean
     public SecurityManager securityManager(UserRealm userRealm) {
         DefaultWebSecurityManager defaultSecurityManager = new DefaultWebSecurityManager();
@@ -63,6 +70,11 @@ public class ShiroConfig {
         return defaultSecurityManager;
     }
 
+    /**
+     * 自定义的Realm
+     *
+     * @return
+     */
     @Bean
     public UserRealm userRealm() {
         UserRealm userRealm = new UserRealm();
